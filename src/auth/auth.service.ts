@@ -48,7 +48,7 @@ export class AuthService {
     });
 
     // if the user doesn't exist, throw an error
-    if (!user) throw new ForbiddenException('Invalid credentials');
+    if (!user) throw new ForbiddenException('No user found');
 
     // if the user exists, compare the password
     const valid = await argon.verify(user.hash, dto.password);
