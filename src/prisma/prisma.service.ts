@@ -13,4 +13,12 @@ export class PrismaService extends PrismaClient {
       },
     });
   }
+
+  cleanDb() {
+    // we run a transaction to avoid any foreign key constraint
+    return this.$transaction([
+      this.bookmark.deleteMany(),
+      this.user.deleteMany(),
+    ]);
+  }
 }
