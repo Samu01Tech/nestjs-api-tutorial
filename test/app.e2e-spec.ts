@@ -4,7 +4,6 @@ import * as pactum from 'pactum';
 import { PrismaService } from '../src/prisma/prisma.service';
 import { AppModule } from '../src/app.module';
 import { AuthDto } from '../src/auth/dto';
-import { first } from 'rxjs';
 import { CreateBookmarkDto, EditBookmarkDto } from '../src/bookmark/dto';
 
 describe('App e2e', () => {
